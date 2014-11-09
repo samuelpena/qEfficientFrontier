@@ -1,0 +1,10 @@
+Package: qEfficientFrontier
+Type: Package
+Title: Efficient Frontier for a Equity Portfolio
+Version: 1.0
+Date: 2014-11-06
+Author: Samuel Pena <spa@qlik.com>
+Maintainer: Samuel Pena <spa@qlik.com>
+Description: Allows any QlikView application to send an equity prtfolio to R
+    and run the means variances to the data
+License: MIT
