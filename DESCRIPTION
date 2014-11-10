@@ -8,3 +8,5 @@ Maintainer: Samuel Pena <spa@qlik.com>
 Description: Allows any QlikView application to send an equity prtfolio to R
     and run the means variances to the data
 License: MIT
+Depends:
+    quadprog
