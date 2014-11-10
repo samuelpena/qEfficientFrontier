@@ -12,6 +12,9 @@ eff_frontier <- function (Data){
   # risk premium modeled (see for loop below) and risk_increment is the
   # increment (by) value used in the for loop
   
+  # Depend on the quadprog library to be running
+  library("quadprog")
+  
   #Convert the json data to numeric matrix
   data <- data.matrix(Data$data,rownames.force=TRUE) # Converts to data matrix
   colNames <- rownames(data) # Gets the rows names
