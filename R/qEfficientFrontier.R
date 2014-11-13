@@ -3,7 +3,9 @@
 #' Takes in any portfolio of stocks return and optimizes it using the Efficient Frontier 
 #' @param Data A portfolio with its parameters to be optimize 
 #' @return The allocation percent for the portfolio
+#' @import quadprog 
 #' @export
+ 
 eff_frontier <- function (Data){
   # return argument should be a m x n matrix with one column per security
   # short argument is whether short-selling is allowed; default is no (short
@@ -11,9 +13,6 @@ eff_frontier <- function (Data){
   # security (reduces concentration) risk_premium_up is the upper limit of the
   # risk premium modeled (see for loop below) and risk_increment is the
   # increment (by) value used in the for loop
-  
-  # Depend on the quadprog library to be running
-  library("quadprog")
   
   #Convert the json data to numeric matrix
   data <- data.matrix(Data$data,rownames.force=TRUE) # Converts to data matrix
